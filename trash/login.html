@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Heads Up Ent.</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+		
+		<!-- Content -->
+			<div id="content">
+				<div class="inner">
+
+					<table>
+						<tr>
+							<td width="60%" valign="top">
+								<h2>Join Heads Up Ent. Today!</h2>
+							</td>
+							<td width="40%" valign="top">
+								<h2>Sign Up Below!</h2>
+								<form>
+									<input type="text" name="firstName" size="25" placeholder="First Name"/><br>
+									<input type="text" name="lastName" size="25" placeholder="Last Name"/><br>
+									<input type="text" name="usernam" size="25" placeholder="Username"/><br>
+									<input type="text" name="email" size="25" placeholder="Email"/><br>
+									<input type="text" name="password" size="25" placeholder="Password"/><br>
+									<input type="text" name="password" size="25" placeholder="Password Confirmation"/><br>
+									<input type="submit" name="submit" value="Sign Up!"/>
+									
+								</form>
+							</td>
+						</tr>
+					</table>
+
+
+
+				</div>
+			</div>
+
+		<!-- Sidebar -->
+			<div id="sidebar">
+
+				<!-- Logo -->
+					<h1 id="logo"><a href="#">[Insert Logo Here]</a></h1>
+
+				<!-- Login Section -->
+					<section class="box text-style1">
+						<header>
+							<h2>Welcome Back!</h2>	
+						</header>
+
+						<form>
+							<input type="text" name="emailUsername" placeholder="Email or Username"/><br>
+							<input type="text" name="password" placeholder="Password"/>
+							<a href="#">Forgot your password?</a><br>
+							<input type="submit" name="submit" value="Login"/>
+							<!--Facebook Login Button-->
+							<div class="fb-login-button" data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="false"></div>
+						</form>
+
+						
+					</section>
+
+				<!-- Copyright -->
+					<ul id="copyright">
+						<li>&copy; Golden Infinity.</li>
+					</ul>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/skel.min.js"></script>
+			<script src="js/util.js"></script>
+			<!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->
+			<script src="js/main.js"></script>
+
+			<!--Facebook JavaScript SDK-->
+			<script>
+		      window.fbAsyncInit = function() {
+		        FB.init({
+		          appId      : '407161576144570',
+		          xfbml      : true,
+		          version    : 'v2.4'
+		        });
+		      };
+
+		      (function(d, s, id){
+		         var js, fjs = d.getElementsByTagName(s)[0];
+		         if (d.getElementById(id)) {return;}
+		         js = d.createElement(s); js.id = id;
+		         js.src = "//connect.facebook.net/en_US/sdk.js";
+		         fjs.parentNode.insertBefore(js, fjs);
+		       }(document, 'script', 'facebook-jssdk'));
+    		</script>
+
+	</body>
+</html>
