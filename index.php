@@ -1,7 +1,11 @@
 <?php 
 
 	include("./db/connect.php"); 
-	
+	session_start();
+
+	if(isset($_SESSION['username'])){
+	header("location:home.php?action=yes");
+}
 	
 ?>
 <!DOCTYPE HTML>
@@ -34,6 +38,10 @@
 			$password2 = ""; //Password Confirmation
 			$signUpDate = ""; //Sign Up Date
 			$u_check = ""; //Check if username exists
+
+			//login variables
+			$username_login = "";
+			$password_login = "";
 
 			//registration form
 			$firstName = strip_tags(@$_POST['firstName']);
@@ -115,6 +123,29 @@
 				}
 			}
 
+			//Login User Sessions
+			
+			if(!empty($_POST['login'])){
+				$username_login = $_POST['user_login'];
+				$password_login = $_POST['password_login'];
+
+
+				$clean_username = strip_tags(stripslashes(mysql_real_escape_string($username_login)));
+				$clean_password = md5(strip_tags(stripslashes(mysql_real_escape_string($password_login))));
+
+				$sql="SELECT * FROM users WHERE username='$clean_username' and password='$clean_password'";
+				$rs = mysql_query($sql) or die ("Query failed");
+
+				$numofrows = mysql_num_rows($rs);
+
+				if($numofrows==1){
+					$_SESSION['username'] = $clean_username;
+					header("location:home.php?action=yes");
+				}
+				else {
+					
+				}
+			}
 
 
 		?>
@@ -168,7 +199,7 @@
 							<h2>Welcome Back!</h2>	
 						</header>
 
-						<form action="index.php" method="POST">
+						<form action="index.php" method="POST" name="login">
 							<input type="text" name="user_login" placeholder="Username"/><br>
 							<input type="text" name="password_login" placeholder="Password"/>
 							<a href="#">Forgot your password?</a><br>

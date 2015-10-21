@@ -82,7 +82,7 @@
 
 				<!-- Copyright -->
 					<ul id="copyright">
-						<li><a href="">Logout</a></li>
+						<li><a href="logout.php">Logout</a></li>
 						<li>&copy; Golden Infinity.</li>
 					</ul>
 
